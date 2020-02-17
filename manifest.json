@@ -1,0 +1,20 @@
+{
+    "name": "Demo",
+    "description": "My First Chrome Extension",
+    "version": "1.0",
+    "browser_action": {
+      "default_icon": "/images/consul.png",
+      "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "webRequest"
+      ],
+    "content_scripts": [ 
+        { 
+        "js": [ "jquery.min.js" ],
+            "matches": [ "http://*/*", "https://*/*"]
+        }
+    ],
+    "manifest_version": 2
+  }
