@@ -1,12 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Demo Extension</title>
+    <title>Consul clone KV</title>
     <script src="jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/popup.css" />
   </head>
   <body>
-    <h1>Demo Extension</h1>
-    <button id="displayAlert">Display</button>
-    <script src="scripts/popup.js"></script>
+    <h1 class="banner">Consul clone KV</h1>
+    <div class="container">
+      <div class="flex">
+        <div class="flex-one">
+          <button type="button" class="collapsible">Source</button>
+          <div class="content" style="height: 0px;">
+            <form id="source-from" class="form-funny">
+              <input type="text" id="key" name="key" placeholder="Api Key" />
+
+              <input type="text" id="pass" name="pass" placeholder="Secret" />
+
+              <input type="text" id="path" name="pass" placeholder="Key path" />
+
+            </form>
+          </div>
+        </div>
+        <div class="flex-one">
+          <button type="button" class="collapsible right">Destination</button>
+          <div class="content" style="height: 0px;">
+            <form id="source-from" class="form-funny">
+              <input type="text" id="key" name="key" placeholder="Api Key" />
+
+              <input type="text" id="pass" name="pass" placeholder="Secret" />
+
+              <input type="text" id="path" name="pass" placeholder="Key path" />
+
+            </form>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn-submit">Submit</button>
+      <!-- <button style="padding: 20px;" id="displayAlert">Display</button> -->
+      <script src="scripts/popup.js"></script>
+    </div>
   </body>
 </html>
