@@ -3,6 +3,7 @@
   <head>
     <title>Consul clone KV</title>
     <script src="jquery.min.js"></script>
+    <script src="jquery.validate.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/popup.css" />
   </head>
   <body>
@@ -10,33 +11,41 @@
     <div class="container">
       <div class="flex">
         <div class="flex-one">
-          <button type="button" class="collapsible">Source</button>
-          <div class="content" style="height: 0px;">
-            <form id="source-from" class="form-funny">
-              <input type="text" id="key" name="key" placeholder="Api Key" />
+          <button type="button" class="div-header">Source</button>
+          <div class="div-content" >
+            <form id="source-form" class="form-funny">
+              <a class="btn-collap">Credentials</a>
+              <div class ="content" >
+                <input type="text" id="sUrl" name="s-url" placeholder="Consul Url" />
 
-              <input type="text" id="pass" name="pass" placeholder="Secret" />
-
-              <input type="text" id="path" name="pass" placeholder="Key path" />
+                <input type="text" id="sKey" name="s-key" placeholder="Api Key" />
+  
+                <input type="text" id="sPass" name="s-pass" placeholder="Secret" />
+              </div>
+              <input type="text" id="sPath" name="s-path" placeholder="Key path" />
 
             </form>
           </div>
         </div>
         <div class="flex-one">
-          <button type="button" class="collapsible right">Destination</button>
-          <div class="content" style="height: 0px;">
-            <form id="source-from" class="form-funny">
-              <input type="text" id="key" name="key" placeholder="Api Key" />
+          <button type="button" class="div-header right">Destination</button>
+          <div class="div-content">
+            <form id="destination-form" class="form-funny">
+              <a class="btn-collap">Credentials</a>
+              <div class ="content" >
+                <input type="text" id="dUrl" name="s-url" placeholder="Consul Url" />
 
-              <input type="text" id="pass" name="pass" placeholder="Secret" />
-
-              <input type="text" id="path" name="pass" placeholder="Key path" />
+                <input type="text" id="dKey" name="s-key" placeholder="Api Key" />
+  
+                <input type="text" id="dPass" name="s-pass" placeholder="Secret" />
+              </div>
+              <input type="text" id="dPath" name="s-path" placeholder="Key path" />
 
             </form>
           </div>
         </div>
       </div>
-      <button type="submit" class="btn-submit">Submit</button>
+      <button type="button" class="btn-submit" id="btnSubmit">Submit</button>
       <!-- <button style="padding: 20px;" id="displayAlert">Display</button> -->
       <script src="scripts/popup.js"></script>
     </div>
