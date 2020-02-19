@@ -76,8 +76,8 @@ function saveKeyToLocal() {
     var obj = {}
     var data = $('#' + element).val();
     if (element.includes('Url')) {
-      if (!data.endsWith('/')) {
-        data = data + '/'
+      if (!data.endsWith('/v1/kv/')) {
+        data = data + '/v1/kv/'
       }
     } 
     if (element.includes('Path')) {
