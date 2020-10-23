@@ -100,7 +100,7 @@ function saveKeyToLocal() {
       if (data.startsWith("/")) {
         data = data.substring(1, data.length);
       }
-      if (!data.endsWith("/")) {
+      if (!data.endsWith("/") && !data.includes('.')) {
         data = data + "/";
       }
     }
@@ -126,6 +126,7 @@ function getAllKey(authObj) {
       );
     },
     success: function (response) {
+      console.log(response)
       allKey = response;
     },
     error: function (error) {
