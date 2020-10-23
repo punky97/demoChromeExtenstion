@@ -1,20 +1,22 @@
 {
-    "name": "Consul Clone KV",
-    "description": "Clone Consul KeyValue to new Path",
-    "version": "1.0",
-    "browser_action": {
-      "default_icon": "/images/consul.png",
-      "default_popup": "popup.html"
-    },
-    "permissions": [
-        "webRequest",
-        "storage"
-      ],
-    "content_scripts": [ 
-        { 
-        "js": [ "jquery.min.js" ],
-            "matches": [ "http://*/*", "https://*/*"]
-        }
-    ],
-    "manifest_version": 2
-  }
+  "name": "Consul Clone KV",
+  "description": "Clone Consul KeyValue to new Path",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "/images/consul.png",
+    "default_popup": "popup.html"
+  },
+  "icon": {
+    "16": "/images/16.png",
+    "48": "/images/48.png",
+    "128": "/images/128.png"
+  },
+  "permissions": ["webRequest", "storage"],
+  "content_scripts": [
+    {
+      "js": ["jquery.min.js"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ],
+  "manifest_version": 2
+}
